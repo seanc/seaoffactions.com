@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=0.75">
+  <meta name="description" content="">
+  <title>SeaOfFactions » Portal</title>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="http://158.69.22.9/js/jquery.firefly-0.3-min.js"></script>
+</head>
+<body>
+
+  <div class="fixer"><a href=""><img id="logo" src="images/logo.png"></a></div>
+
+  <div id="players">Join <span id="online"></span> players @ play.seaoffactions.com</div>
+
+  <div class="icons">
+
+    <a class="icon" href="#">
+      <div id="forum"></div>
+      <p>FORUM</p>
+    </a>
+
+    <a class="icon" href="#">
+      <div id="vote"></div>
+      <p>VOTE</p>
+    </a>
+
+    <a class="icon" href="#">
+      <div id="store"></div>
+      <p>STORE</p>
+    </a>
+
+  </div>
+
+  <p id="footer">© SeaOfFactions | <a id="mazzen" href="http://steamcommunity.com/id/VampyTheGod/">Page by Vampy</a></p>
+
+  <script>
+  $(document).ready(function () {
+      var interval = 12000;   //number of mili seconds between each call
+      var refresh = function() {
+      $.getJSON("http://mcapi.ca/query/149.56.0.40:25565/players",function(json){
+            if (json.status !== true) {
+              // error
+              $("#players").text('Server Offline...');
+          } else {
+              // success
+              $("#online").html(json.players.online);
+          }
+      });
+      setTimeout(function() {
+          refresh();
+              },
+          interval);
+              }
+          refresh();
+  });
+
+  $.firefly({
+    color: '#fff',
+    minPixel: 1,
+    maxPixel: 1,
+    total : 65,
+    on: 'body'
+  });
+  </script>
+
+ <!-- Google 
+ <script>
+ 
+  </script>
+   -->
+</body>
+</html>

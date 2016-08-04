@@ -1,0 +1,163 @@
+* { margin: 0; padding: 0; max-width: 100%;}
+
+::selection {
+  background: #61B2A7;
+}
+
+::-moz-selection {
+  background: #61B2A7;
+}
+
+body {
+  background: #888 url("../images/bg.jpeg") no-repeat fixed center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 60px;
+}
+
+.fixer {
+  text-align: center;
+  margin: auto;
+}
+
+#logo {
+  width: 600px;
+  position: relative;
+  -webkit-animation: bounce 2s infinite;
+  -moz-animation: bounce 2s infinite;
+  -ms-animation: bounce 2s infinite;
+  -o-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@-webkit-keyframes bounce {
+  0% {bottom: 0px;}
+  50% {bottom: 20px;}
+  100% {bottom: 0px;}
+}
+
+@-moz-keyframes bounce {
+  0% {bottom: 0px;}
+  50% {bottom: 20px;}
+  100% {bottom: 0px;}
+}
+
+@-ms-keyframes bounce {
+  0% {bottom: 0px;}
+  50% {bottom: 20px;}
+  100% {bottom: 0px;}
+}
+
+@-o-keyframes bounce {
+  0% {bottom: 0px;}
+  50% {bottom: 20px;}
+  100% {bottom: 0px;}
+}
+
+@keyframes bounce {
+  0% {bottom: 0px;}
+  50% {bottom: 20px;}
+  100% {bottom: 0px;}
+}
+
+#players {
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.3);
+  border: 3px solid #ffffff;
+  border-radius: 24px;
+  width: 450px;
+  padding: 3px;
+  position: relative;
+  top: 10px;
+  margin: auto;
+}
+
+.icons {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.icon {
+  display: inline-block;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.icon div {
+  width: 140px;
+  height: 122px;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.icon p {
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  text-shadow: 0px 0px 18px #000;
+  margin: 15px;
+}
+
+#forum {
+  background: url('../images/icons/forum-1.png');
+}
+
+#forum:hover {
+  background: url('../images/icons/forum-2.png');
+}
+
+#vote {
+  background: url('../images/icons/vote-1.png');
+}
+
+#vote:hover {
+  background: url('../images/icons/vote-2.png');
+}
+
+#store {
+  background: url('../images/icons/store-1.png');
+}
+
+#store:hover {
+  background: url('../images/icons/store-2.png');
+}
+
+#vote {
+  background: url('../images/icons/vote-1.png');
+}
+
+#vote:hover {
+  background: url('../images/icons/vote-2.png');
+}
+
+#footer {
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #777;
+  text-shadow: 0px 0px 18px #000;
+  position: relative;
+  top: 80px;
+}
+
+#mazzen:hover {
+  text-decoration: underline;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
